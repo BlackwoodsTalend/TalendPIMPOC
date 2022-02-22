@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:rBBiuemIYZraE7ElB9JmbpbZwn2fsrydE0lmGJuP"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:HTJIxSiRDlo0T8t+zp5KhYNOg8pttnGvX3kUTQU9"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Tc9VEfqubvNz/Sk5QEQUNgbOlVjmL60zFf3X5jsl"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:ymZDoAZMtYYdzAlyLYmMxLSmqoohK1bWXW0Ibi4e"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -119,7 +119,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Soorya/Downloads/Apparel.xlsx&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:xRu740wH5rCKGM87ru0TUVR513Dz/y7rjemkr42I"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:bi5cOn0xxqMUxeb/wJcJ1tO5devKjz1Kk1gLmZRi"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="true"/>
     <elementParameter field="TABLE" name="SHEETLIST" show="false">
       <elementValue elementRef="SHEETNAME" value="&quot;Apparel&quot;"/>
@@ -491,9 +491,10 @@
       <column comment="" key="false" length="-1" name="Color" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Style_Number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Product_Type" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Brand" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="out1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row13.Part_Description " name="Part_Description" nullable="true" type="id_String"/>
@@ -501,6 +502,7 @@
         <mapperTableEntries expression="(row13.Category.equals(&quot;Color&quot;)) ? row13.Term  : null" name="Color" nullable="true" type="id_String"/>
         <mapperTableEntries expression="(row13.Category.equals(&quot;Style_Number&quot;)) ? row13.Term  : null" name="Style_Number" nullable="true" type="id_String"/>
         <mapperTableEntries expression="(row13.Category.equals(&quot;Product_Type&quot;)) ? row13.Term  : null" name="Product_Type" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(row13.Category.equals(&quot;Brand&quot;)) ? row13.Term  : null" name="Brand" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row13" sizeState="INTERMEDIATE">
         <mapperTableEntries name="Part_Description" nullable="true" type="id_String"/>
@@ -536,6 +538,8 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Product_Type"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Brand"/>
+      <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
@@ -546,6 +550,7 @@
       <column comment="" key="false" length="-1" name="Color" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Style_Number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Product_Type" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Brand" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="672">
@@ -583,6 +588,7 @@
       <column comment="" key="false" length="-1" name="Color" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Style_Number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Product_Type" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Brand" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tReservoirSampling" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="672">
@@ -596,6 +602,7 @@
       <column comment="" key="false" length="-1" name="Color" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Style_Number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Product_Type" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Brand" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="672">
@@ -622,6 +629,8 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Product_Type"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Brand"/>
+      <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
@@ -632,13 +641,14 @@
       <column comment="" key="false" length="-1" name="Color" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Style_Number" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Product_Type" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Brand" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_4"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Soorya/Downloads/BW1-01/DWCLOUD/resources/Dict.xlsx_0.1.xlsx&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:EKTcHgq3caNlZDo7t6zIvctVzg7z25gokV4JLGvK"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:CZR5E1AxNf1QsD2rg+duJ8GgxDIIvfQFFJ4xob2A"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="true"/>
     <elementParameter field="TABLE" name="SHEETLIST" show="false">
       <elementValue elementRef="SHEETNAME" value="&quot;Sheet1&quot;"/>
@@ -841,7 +851,7 @@
       <column comment="" key="false" length="3" name="Confidence" nullable="true" originalLength="3" pattern="" precision="2" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables activateExpressionFilter="true" expressionFilter="row1.Part_Description.contains(((String)globalMap.get(&quot;row6.Term&quot;)))" name="row2" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.Part_Description" name="Part_Description" nullable="true" type="id_String"/>
@@ -1208,6 +1218,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="Product_Type"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Brand"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
@@ -1217,6 +1230,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row14"/>
   </connection>
   <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tReservoirSampling_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Brand"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row15"/>
   </connection>
@@ -1326,13 +1344,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a98b75cc-639e-4ca0-bca5-c14e282c85e4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>svenwcOkc6gBZIPmDhwCyJH+sAE4jlSWDnJnZmesYF3HLCutv79rt4dN+e5f1voJBJwHM3cSgzx7&#13;
-mx/TRbzPuA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c517e6af-71af-40f2-b884-b1f01f008bb5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Y7zg5sHrIh/Q2rFJnV0gSKW973EXCVx9G8gtggoHnlWMQMUqmxo9gTsBJdo5hGY/erG2k14b6VtN&#13;
-A7vXvx16cQ==</DigestValue></Reference></SignedInfo><SignatureValue>pOKhXt3JYoONg/gEk+CD7PdhYJNOBYsCFoJtKcvoEa2Vy8fYg4M2qcPyxiC3AS/lO3n2ZlM/jmXV&#13;
-HJ4Xtc0Za6/KEXSNft+aIe82wXf68GvrNJJEiDpYil35QIBVQ8BUmZnoGbGePvafk2pHh4ed+92L&#13;
-K2Orr8I9KkwOaPOQaZwqPZyvMp4rmaz5bqLwWk0dUaekU8UnV+UmXTWI9p9v4Bpnfl7pIOXq5zCu&#13;
-PgA47ap/FmqktNfbCky8aZoP8+Uj12Jb2DQLGQSPE7SwYgiOQmROnV58DQTMr2ayA5DP6jK0GO3+&#13;
-UimD6KCKTAcFNkleqHR6vXUBRvB1T4odRdyq/w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0ffe888e-0ae7-4d27-a666-6788d464d64c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>nXnQ1dGQxmTIWzVen6XQnzIPE6U1+1A7bu//lSSLMAsoy9cXjj7c7yaH3nVjyZEUBv7p/PQRK+La&#13;
+LzNbqr9sRw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a7c611f6-6894-4a5b-b6e0-fac398bc0211"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>egfW5lJfGBirAh0J5SaSN+DZXi7GS15E7Mv9YmyOUwpgMovO9V8yl+RWMa/WAi39TioPDQ6sXayx&#13;
+F9JzsQoTMw==</DigestValue></Reference></SignedInfo><SignatureValue>oITsBP4Xfy1n1KV4RoqnJ/IEFsJPTpeiREqm6BtPr2kEYy7Q9V60La3xas8plSchlljFG3T2mv5L&#13;
+ASex4HR9bxCq2JF3drnCOqvnOsyiZFuAfmOBM5Wp2uAH864to+ydcDPeUv23dBMcvfcdNKHUS+qv&#13;
+JqH+ClnfF/M8c10dCSAAAsU9/aZl4RmJoFUKfy6pm7ucXqz0DVKDk+THCYgtjKGyJrQ8Uzpwrevw&#13;
+CvDy+1V4XyML+aQMTgIjRWh28M3jTPfCvoHSo4sQqMfMUzThyHh2dQKYClTNRCy2TlMLkHizwLAZ&#13;
+L2XVEtJ4MMKBFCWkoZ2zykZ+ehJoHQXeq3L69Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1354,4 +1372,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c517e6af-71af-40f2-b884-b1f01f008bb5" Target="#_a98b75cc-639e-4ca0-bca5-c14e282c85e4"><Timestamp>2022-02-22 05:38:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a7c611f6-6894-4a5b-b6e0-fac398bc0211" Target="#_0ffe888e-0ae7-4d27-a666-6788d464d64c"><Timestamp>2022-02-22 06:00:18</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
