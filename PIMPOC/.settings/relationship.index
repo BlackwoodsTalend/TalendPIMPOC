@@ -35,10 +35,6 @@
     "type" : "job"
   },
   "relatedItems" : [ {
-    "id" : "_PYhYMJqwEeyl5K9Z50Xobw",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
     "id" : "_vVuBAI-hEeyjWaBXWkg5zw - metadata",
     "version" : "Latest",
     "type" : "schema"
